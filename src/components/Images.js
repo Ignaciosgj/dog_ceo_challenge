@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getImages } from "../helpers/getImages";
+import { PropTypes } from "prop-types";
 
 import "../index.css";
 
@@ -89,3 +90,8 @@ export const Images = ({ selectedBreeds, selectedSubBreeds }) => {
         </div>
     );
 };
+
+Images.prototypes = {
+    selectedBreeds: PropTypes.array.isRequired,
+    selectedSubBreeds: PropTypes.array.isRequired
+}
